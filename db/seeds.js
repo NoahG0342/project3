@@ -88,3 +88,10 @@ const noah = new User({
     lp: 5000,
     decks: [main]
 })
+
+User.remove({})
+    .then(() => Cards.insertMany([bribe, drown, rai, twin, solar, red, dark, blue]))
+    .then(() => Deck.insertMany([main]))
+    .then(() => noah.save())
+    .then(() => console.log('Successful Save'))
+    .then(() => mongoose.connection.close())
