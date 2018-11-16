@@ -26,3 +26,50 @@ const red = new Cards({
     discription: 'a strong drangon with a deadly attack'
 })
 
+const solar = new Cards({
+    name: 'Solar Recharge',
+    type: 'spell',
+    ATK: 0,
+    DEF: 0,
+    discription: 'Discad 1 Lightsworn monster; draw 2 cards, then send thetop 2 cards of your deck to the grave yard'
+})
+
+const twin = new Cards({
+    name: 'Twin Twister',
+    type: 'spell',
+    ATK: 0,
+    DEF: 0,
+    discription: 'Discad 1 card, then target up to 2 spell/trap cards on the field and destroy them'
+})
+
+const rai = new Cards({
+    name: 'Raigeki',
+    type: 'spell',
+    ATK: 0,
+    DEF: 0,
+    discription: 'Destroy all monsters your opponent controls'
+})
+
+const drown = new Cards({
+    name: 'Drowning Mirror Force',
+    type: 'Trap',
+    ATK: 0,
+    DEF: 0,
+    discription: 'when an opponets monster declares a direct attact : shuffel all attack position monsters your opponent controls into the deck '
+})
+
+const bribe = new Cards({
+    name: 'Dark Bribe',
+    type: 'Trap',
+    ATK: 0,
+    DEF: 0,
+    discription: 'When a opponents Spell/Trap card is activated: your opponent draws 1 card also negate the spell/trap activation and if you do destroy it'
+})
+
+const call = new Cards({
+    name: 'Call of the Haunted',
+    type: 'Trap',
+    ATK: 0,
+    DEF: 0,
+    discription: 'Activate this card by targeting 1 monster in your grave yard; special summon that target in attack position. when this card leaves the field destroy that target. when that target is destroyed, destroy this card'
+})
