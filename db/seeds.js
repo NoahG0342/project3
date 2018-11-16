@@ -73,3 +73,10 @@ const call = new Cards({
     DEF: 0,
     discription: 'Activate this card by targeting 1 monster in your grave yard; special summon that target in attack position. when this card leaves the field destroy that target. when that target is destroyed, destroy this card'
 })
+
+const main = new Deck({
+    name: 'deck1',
+    amountOfCards: 9,
+    discription: 'starter deck',
+    cards: [bribe, drown, rai, twin, solar, red, dark, blue]
+})
