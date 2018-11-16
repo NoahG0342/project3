@@ -80,3 +80,11 @@ const main = new Deck({
     discription: 'starter deck',
     cards: [bribe, drown, rai, twin, solar, red, dark, blue]
 })
+
+const noah = new User({
+    username: 'Noah0342',
+    password: '0342',
+    age: 21,
+    lp: 5000,
+    decks: [main]
+})
