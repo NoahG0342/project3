@@ -9,12 +9,15 @@ connection.on('connected', () => {
     console.log('mongoose is connected')
 })
 
+app.use('/api/users', UsersController)
+
+
 app.use(express.static(__dirname + '/client/build/'));
 
 app.get('/', (req,res) => {
     res.sendFile(__dirname + '/client/build/index.html')
   })
-  
+
 connection.on('error', (err) => {
     console.log('Mongoose default connection error: ' + err);
   }) 
