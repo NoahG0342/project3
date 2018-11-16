@@ -1,6 +1,11 @@
+require('dotenv').config()
+const mongoose = require('mongoose')
+mongoose.connect(process.env.MONGODB_URI)
+
 const User = require('../models/User')
 const Deck = require('../models/Deck')
 const Cards = require('../models/Cards')
+
 
 const blue = new Cards({
     name: 'Blue-Eyes White Dragon',
@@ -78,7 +83,7 @@ const main = new Deck({
     name: 'deck1',
     amountOfCards: 9,
     discription: 'starter deck',
-    cards: [bribe, drown, rai, twin, solar, red, dark, blue]
+    cards: [bribe, drown, rai, twin, solar, red, dark, blue, call]
 })
 
 const noah = new User({
@@ -90,7 +95,7 @@ const noah = new User({
 })
 
 User.remove({})
-    .then(() => Cards.insertMany([bribe, drown, rai, twin, solar, red, dark, blue]))
+    .then(() => Cards.insertMany([bribe, drown, rai, twin, solar, red, dark, blue, call]))
     .then(() => Deck.insertMany([main]))
     .then(() => noah.save())
     .then(() => console.log('Successful Save'))

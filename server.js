@@ -9,8 +9,6 @@ connection.on('connected', () => {
     console.log('mongoose is connected')
 })
 
-app.use('/api/users', UsersController)
-
 
 app.use(express.static(__dirname + '/client/build/'));
 
