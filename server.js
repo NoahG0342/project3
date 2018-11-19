@@ -3,11 +3,14 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 mongoose.connect(process.env.MONGODB_URI)
+const routes = require('./routes/index')
 
 const connection = mongoose.connection
 connection.on('connected', () => {
     console.log('mongoose is connected')
 })
+
+app.use('/', routes)
 
 app.use(express.static(__dirname + '/client/build/'));
 
