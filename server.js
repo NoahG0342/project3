@@ -9,7 +9,6 @@ connection.on('connected', () => {
     console.log('mongoose is connected')
 })
 
-
 app.use(express.static(__dirname + '/client/build/'));
 
 app.get('/', (req,res) => {
