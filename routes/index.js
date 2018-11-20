@@ -8,6 +8,7 @@ const cardsController = require('../controllers/cardsController')
 router.get('/api/user', userController.index)
 router.post('/api/user', userController.create)
 router.delete('/api/user/:userId', userController.delete)
+router.patch('/api/users/:userId', userController.update)
 
 router.get('/api/user/:userId/deck', deckController.index)
 router.post('/api/user/:userId/deck', deckController.create)

@@ -23,7 +23,15 @@ const userController = {
                 res.send(200)
             })
 
-        }
+        },
+
+        update: (req, res) => {
+            User.findByIdAndUpdate(req.params.userId, req.body)
+                .then((updatedUser) => {
+                    updatedUser.save()
+                    res.send(updatedUser)
+                })
+            }
 
 }
 
