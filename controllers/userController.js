@@ -4,8 +4,8 @@ const User = require('../models/User')
 const userController = {
     index: (req, res) => {
         User.find({})
-            .then((users) => {
-                res.send(users)
+            .then((user) => {
+                res.send(user)
             })
     },
 
@@ -13,7 +13,7 @@ const userController = {
         User.create(req.body)
             .then((user) => {
                user.save()
-               res.redirect('/api/user')
+               res.redirect('/api/users')
             })
     },
 

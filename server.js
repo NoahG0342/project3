@@ -10,13 +10,14 @@ connection.on('connected', () => {
     console.log('mongoose is connected')
 })
 
-app.use('/', routes)
 
 app.use(express.static(__dirname + '/client/build/'));
 
 app.get('/', (req,res) => {
-    res.sendFile(__dirname + '/client/build/index.html')
-  })
+  res.sendFile(__dirname + '/client/build/index.html')
+})
+
+app.use('/', routes)
 
 connection.on('error', (err) => {
     console.log('Mongoose default connection error: ' + err);
